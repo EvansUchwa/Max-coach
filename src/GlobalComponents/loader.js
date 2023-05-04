@@ -1,0 +1,44 @@
+// import { SimpleImage } from "./Img"
+export const FixedLoader = () => {
+    return <div className="fixedLoader">
+        <i className="mdi mdi-spin mdi-loading"></i>
+    </div>
+}
+
+
+export const SimpleIconLoader = () => {
+    return <>
+        <i className="mdi mdi-spin mdi-loading"></i>
+    </>
+}
+
+export const SimpleSectionLoader = () => {
+    return <div className="sectionLoader">
+        <i className="mdi mdi-spin mdi-loading"></i>
+    </div>
+}
+
+// export const LogoLoader = () => {
+//     return <section className='websiteLogoLoader'>
+//         <SimpleImage props={{ src: 'logo.png', alt: "logo img site Loader" }} />
+//     </section>
+// }
+export const ObjectChildLoader = ({ children, dataIsLoad }) => {
+    return dataIsLoad ? children : <SimpleSectionLoader />;
+}
+
+export const ArrayChildLoader = ({ children, dataIsLoad }) => {
+    return dataIsLoad.length ? children : <SimpleSectionLoader />;
+}
+
+export const BooleanChildLoader = ({ children, dataIsLoad }) => {
+    return dataIsLoad === false ? <SimpleSectionLoader /> : children
+
+    // function ret(children, dataIsLoad){
+    //     setTimeout(()=>{
+    //         if(dataIsLoad){
+
+    //         }
+    //     },2000)
+    // }   
+}

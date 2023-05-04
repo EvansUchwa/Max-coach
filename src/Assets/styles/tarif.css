@@ -1,0 +1,56 @@
+.tarifs-liste {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.tarifs-liste > div {
+  cursor: pointer;
+  width: 30%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  padding: 30px 15px;
+  margin: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.tarifs-liste div i {
+  color: var(--color3);
+  font-size: 80px;
+}
+.tarifs-liste div > b {
+  color: var(--color4);
+  font-size: 40px;
+}
+.tarifs-liste div p {
+  margin: 10px 0;
+  color: var(--color3);
+}
+.tarifs-liste div p b {
+  color: var(--color1);
+  font-size: 25px;
+  margin-right: 5px;
+}
+.tarifs-liste div span {
+  color: var(--color3);
+  margin: 10px 0;
+}
+.tarifs-liste div a {
+  padding: 10px 15px;
+  background-color: var(--color1);
+  border-radius: 10px;
+  margin-top: 20px;
+  color: white;
+}
+.tarifs-liste div a span{
+  color: white;
+}
+
+@media screen and (max-width: 512px) {
+  .tarifs-liste div {
+    width: 90%;
+  }
+}
